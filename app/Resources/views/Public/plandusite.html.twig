@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 id="main-title">Plan du site</h1>
+    <div id="admin-content">
+        <div id="formModel"  style="display: flex; justify-content: center">
+            <ul>
+                <li><a href="{{ path('app_index') }}">Accueil</a></li>
+                <li><a href="{{ path('app_agenda') }}">Agenda</a></li>
+                <li><a href="{{ path('app_contact') }}">Contact</a></li>
+                <li><a href="{{ path('app_danses') }}">Danses</a></li>
+                <li><a href="{{ path('app_mentions_legales') }}">Mentions Légales</a></li>
+                <li><a href="{{ path('app_plan_du_site') }}">Plan du Site</a></li>
+                <li><a href="{{ path('app_qui_sommes_nous') }}">Qui sommes nous ?</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock body %}

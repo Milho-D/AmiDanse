@@ -1,0 +1,84 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Cours Suivi</h1>
+        <div style="padding:20px">
+            <button class="btn" style="margin-left: 20px">
+                <a href="{{ path('app_admin_cours_choixtype') }}">S'inscrire à un cours</a>
+            </button>
+            <hr/>
+            <h2>À venir</h2>
+            <div class="table-responsive" style="padding:20px">
+                <hr>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nom du cours</th>
+                        <th>Type de danse</th>
+                        <th>Salle</th>
+                        <th>Niveau</th>
+                        <th>Début du cours</th>
+                        <th>Fin du cours</th>
+                        <th>Place Restantes</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for cour in coursvenir %}
+                        <tr>
+                            <td>{{ cour.nomCours }}</td>
+                            <td>{{ cour.type.nomType }}</td>
+                            <td>{{ cour.salle.nomSalle }}</td>
+                            <td>{{ cour.niveau.nomNiveau }}</td>
+                            <td>{{ cour.dateDebut|date('d-m-Y H:i') }}</td>
+                            <td>{{ cour.dateFin|date('d-m-Y H:i') }}</td>
+                            <td>{{ cour.placesRestantes }}</td>
+                            <td><a href="{{ path('app_admin_cours_deinscription', { 'id': cour.id}) }}">Se
+                                    désinscrire</a>
+                            </td>
+                            <td><a href="{{ path('app_cours_show', { 'id': cour.id}) }}">Détails</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <h2>Passés</h2>
+            <div class="table-responsive" style="padding:20px">
+                <hr>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nom du cours</th>
+                        <th>Type de danse</th>
+                        <th>Salle</th>
+                        <th>Niveau</th>
+                        <th>Début du cours</th>
+                        <th>Fin du cours</th>
+                        <th>Places Restantes</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for cour in courspasse %}
+                        <tr>
+                            <td>{{ cour.nomCours }}</td>
+                            <td>{{ cour.type.nomType }}</td>
+                            <td>{{ cour.salle.nomSalle }}</td>
+                            <td>{{ cour.niveau.nomNiveau }}</td>
+                            <td>{{ cour.dateDebut|date('d-m-Y H:i') }}</td>
+                            <td>{{ cour.dateFin|date('d-m-Y H:i') }}</td>
+                            <td>{{ cour.placesRestantes }}</td>
+                            <td><a href="{{ path('app_cours_show', { 'id': cour.id}) }}">Détails</a></td>
+                            <td><a href="{{ path('app_admin_avis_new', { 'id': cour.id}) }}">Donner un avis</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1>Responsable</h1>
+        <hr>
+        {{ form_start(userForm) }}
+        {{ form_widget(userForm) }}
+        {{ form_end(userForm) }}
+        <hr>
+        <a href="{{ path('app_admin_users_index') }}">Retour</a>
+    </div>
+{% endblock %}

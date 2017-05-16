@@ -1,0 +1,33 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <h1 id="main-title"> AVIS SUR LE COURS</h1>
+    <div style="padding: 20px">
+        <h4 style="font-weight: bold"> {{ cours.nomCours }} </h4>
+
+    <div class="table-responsive" style="padding:20px">
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom du danseur</th>
+                <th>Avis laissé</th>
+                <th>Note attribuée</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for avis in listeDAvis %}
+                <tr>
+                    <td>{{ avis.danseur.nom }} {{ avis.danseur.prenom }}</td>
+                    <td>{{ avis.messageAvis }}</td>
+                    <td>{{ avis.noteAvis }}</td>
+                    <td><a href="{{path('app_admin_avis_showDetail',{'id': avis.id}) }}">Voir le détail</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {#<a href="{{ path('app_admin_inscriptions') }}">S'inscrire à un cours</a></th>#}
+        <hr>
+    </div>
+    </div>
+{% endblock %}

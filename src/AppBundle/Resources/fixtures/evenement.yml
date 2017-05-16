@@ -1,0 +1,35 @@
+AppBundle\Entity\Evenement:
+    Evenement1:
+        nomEvenement: 'Demo débutant'
+        lieuEvenement: 'Lavoir sur Orge'
+        dateEvenement: <(new \DateTime('2017-05-20 17:00:00'))>
+    Evenement2:
+        nomEvenement: 'Au rythme du vent'
+        lieuEvenement: 'Ré'
+        dateEvenement: <(new \DateTime('2017-05-21 14:00:00'))>
+    Evenement3:
+        nomEvenement: 'Jazz in May'
+        lieuEvenement: 'Rochefort'
+        dateEvenement: <(new \DateTime('2017-05-17 11:00:00'))>
+    Evenement4:
+        nomEvenement: 'Dance Jam day'
+        lieuEvenement: 'La Coursive'
+        dateEvenement: <(new \DateTime('2017-05-31 15:00:00'))>
+    Evenement5:
+        nomEvenement: 'Compétition de Boston'
+        lieuEvenement: 'Oléron'
+        dateEvenement: <(new \DateTime('2017-05-12 14:30:00'))>
+    Evenement6:
+        nomEvenement: 'Ragga Festival'
+        lieuEvenement: 'La plage de la Concurrence'
+        dateEvenement: <(new \DateTime('2017-05-14 13:00:00'))>
+    Evenement7:
+        nomEvenement: 'Rock Caliente'
+        lieuEvenement: 'La Grande Place du Roy'
+        dateEvenement: <(new \DateTime('2017-06-10 20:00:00'))>
+    Evenement8:
+        nomEvenement: 'Hip-Hop in style'
+        lieuEvenement: 'La Tour'
+        dateEvenement: <(new \DateTime('2017-05-29 17:30:00'))>
+
+

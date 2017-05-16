@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 id="main-title" style="margin-bottom: 40px">Cours</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div id="courseDescriptionModel">
+                <div class="row">
+                    <div class="col-md-6" id="custom">
+                        <ul class="list">
+                            <li>Nom du cours : {{ cours.nomCours }} </li>
+                            <li>Animateur-trice(s) :
+                                <ul>
+                                    {% for animateur in cours.animateurs %}
+                                        <li>{{ animateur.prenom }} {{ animateur.nom }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li>Type de danse : {{ cours.type.nomType }}</li>
+                            <li>Salle : {{ cours.salle.nomSalle }}</li>
+                            <li>Niveau : {{ cours.niveau.nomNiveau }}</li>
+                            <li>Début du cours : {{ cours.dateDebut|date('d-m-Y H:i') }}</li>
+                            <li>Fin du cours : {{ cours.dateFin|date('d-m-Y H:i') }}</li>
+                            {% if app.user %}
+                                <li> Danseurs inscrits:
+                                    <ul>
+                                        {% for danseur in cours.danseurs %}
+                                            <li>{{ danseur.prenom }} {{ danseur.nom }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="margin-left: 25px">Animateur-trice(s) :</p>
+                        <ul>
+                        {% for animateur in cours.animateurs %}
+                            <li id="listAnimName" style="font-weight: bold">{{ animateur.prenom }} {{ animateur.nom }}
+                                <img style="height: 247px; width:247px" class="img-responsive"
+                                src="
+                                     {% if animateur.pictureName %}
+                                     {{ asset('images/' ~ animateur.pictureName) }}
+                                     {% else %}
+                                     {{ asset('images/profil_default.png') }}
+                                     {% endif %}" class="rounded"/>
+                            </li>
+                            <hr>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" style="margin: 30px">
+                    {% if app.user not in cours.danseurs %}
+                        <button type="button" class="btn" id="inscription">
+                            <a href="{{ path('app_admin_cours_validateinscription', { id: cours.id}) }}">je
+                                m'inscris</a>
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="height: 30px"></div>
+{% endblock %}

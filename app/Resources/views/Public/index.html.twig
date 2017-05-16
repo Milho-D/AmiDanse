@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'Layout/carousel.html.twig' %}
+    <h1 id="main-title">Bienvenue sur Amidanse</h1>
+    <div class="row" id="welcome-content">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <p>Vous rêvez de participer à danse avec les stars ?
+                Vous n'osez pas vous lancer sur les pistes de danse par peur de vous ridiculiser ?
+                Ou vous aimez la danse tout simplement ?
+                Amidanse vous propose des cours de danses accessibles à toutes et à tous quel que soit votre niveau.
+            </p>
+            <br/>
+            <p>Que vous soyez plutôt danses latines, danses modernes ou danses urbaines, il y en a pour tous les goûts chez Amidanse !
+                Notre équipe de professeurs vous enseignera toutes les techniques de danses que vous désirez maitriser.
+            </p>
+            <br/>
+            <p>Du Tango à la rumba, du foxtrot au charleston, de la samba au hip hop en passant par la Cha-Cha et bien d'autres,
+                la plupart des danses les plus connues vous seront enseignées.
+            </p>
+            <br/>
+            <p>Alors n'attendez plus ! Pour découvrir notre agenda des cours c'est par ici...</p>
+            <br>
+            <button type="button" class="btn" id="inscription">
+                <a href="{{ path('register') }}">Je m'inscris !</a></button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+{%  endblock %}

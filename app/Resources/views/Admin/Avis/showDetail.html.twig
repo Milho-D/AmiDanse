@@ -1,0 +1,32 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+<div id="admin-content">
+    <h1 id="main-title"> AVIS </h1>
+    <div style="padding: 20px">
+        <h4 style="font-weight: bold">Cours : {{ avis.cours.nomCours }}</h4>
+    <div class="table-responsive" style="padding:20px">
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Professeur</th>
+                <th>Note attribuée</th>
+                <th>Message</th>
+                <th>Adresse email de l'auteur</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for animateur in avis.cours.animateurs %}
+                <tr>
+                    <td>{{ animateur.username }}</td>
+                    <td>{{ avis.noteAvis }}</td>
+                    <td>{{ avis.messageAvis }}</td>
+                    <td>{{ avis.danseur.email }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

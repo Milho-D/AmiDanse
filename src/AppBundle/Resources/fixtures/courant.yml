@@ -1,0 +1,10 @@
+AppBundle\Entity\Courant:
+    Danses_Urbaines:
+        nomCourant: 'Danses Urbaines'
+        imageName: 'danse-urbaine.jpg'
+    Danses_Latines:
+        nomCourant: 'Danses Latines'
+        imageName: 'danse-latine.jpg'
+    Danses_Modernes:
+        nomCourant: 'Danses Modernes'
+        imageName: 'danse-moderne.jpg'

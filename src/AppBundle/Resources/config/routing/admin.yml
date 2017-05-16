@@ -1,0 +1,56 @@
+app_admin_cours_animes:
+    path: /cours_animes
+    defaults: { _controller: "AppBundle:Admin/CoursAnimes:index"}
+
+app_admin_cours_suivi:
+    path: /cours_suivis
+    defaults: { _controller: "AppBundle:Admin/CoursSuivi:index"}
+
+app_admin_profil:
+    path: /
+    defaults: { _controller: AppBundle:Admin/Dashboard:profil }
+
+app_admin_profil_edit:
+    path: /edit
+    defaults: { _controller: AppBundle:Admin/Dashboard:edit }
+
+app_admin_password_edit:
+    path: /password
+    defaults: { _controller: AppBundle:Admin/Dashboard:passwordChange }
+
+app_admin_users:
+    resource: "@AppBundle/Resources/config/routing/admin/users.yml"
+    prefix: /users
+
+app_admin_danses_index:
+    path: /danses
+    defaults: { _controller: "AppBundle:Admin/Courant:index"}
+
+app_admin_salles:
+    resource: "@AppBundle/Resources/config/routing/admin/salles.yml"
+    prefix: /salles
+
+app_admin_niveaux:
+    resource: "@AppBundle/Resources/config/routing/admin/niveaux.yml"
+    prefix: /niveaux
+
+app_admin_courants:
+    resource:  "@AppBundle/Resources/config/routing/admin/courants.yml"
+    prefix: /courants
+
+app_admin_types:
+    resource:  "@AppBundle/Resources/config/routing/admin/types.yml"
+    prefix: /types
+
+app_admin_cours:
+    resource:  "@AppBundle/Resources/config/routing/admin/cours.yml"
+    prefix: /cours
+
+app_admin_admin:
+    resource:  "@AppBundle/Resources/config/routing/admin/avis.yml"
+    prefix: /avis
+
+app_admin_evenements:
+    resource:  "@AppBundle/Resources/config/routing/admin/evenements.yml"
+    prefix: /evenements
+

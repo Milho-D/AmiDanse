@@ -1,0 +1,43 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="{{ path('app_index') }}">
+        <img id="logomenu" style="margin: 0" src="{{ asset('images/logo-resized.jpg') }}">
+    </a>
+
+    <div class="collapse navbar-collapse cl-effect-5" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" id="cl-effect-5">
+            <li class="nav-item cl-effect-5">
+                <a class="nav-link {% if app.request.attributes.get('_route') == 'app_danses' %}active{% endif %}" href="{{ path('app_danses') }}"><span data-hover="Danses">Danses</span></a>
+            </li>
+            <li class="nav-item cl-effect-5">
+                <a class="nav-link {% if app.request.attributes.get('_route') == 'app_agenda' %}active{% endif %}" href="{{ path('app_agenda') }}"><span data-hover="Agenda">Agenda</span></a>
+            </li>
+            <li class="nav-item cl-effect-5">
+                <a class="nav-link {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}" href="{{ path('app_contact') }}"><span data-hover="Contact">Contact</span></a>
+            </li>
+            <li class="nav-item cl-effect-5">
+                <a class="nav-link {% if app.request.attributes.get('_route') == 'app_qui_sommes_nous' %}active{% endif %}" href="{{ path('app_qui_sommes_nous') }}"><span data-hover="Qui sommes nous ?">Qui sommes-nous ?</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_profil') }}"><span data-hover="Mon_compte">Mon compte</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('logout') }}"><span data-hover="Déconnexion">Déconnexion</span></a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('register') }}"><span data-hover="Adhérer">Adhérer</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('login') }}"><span data-hover="S'identifier">S'identifier</span></a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+
+</nav>

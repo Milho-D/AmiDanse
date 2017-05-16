@@ -1,0 +1,16 @@
+AppBundle\Entity\Courant:
+    properties:
+        image:
+            - File:
+                mimeTypes: [image/jpeg, image/png]
+                mimeTypesMessage: merci d'uploader un jpg ou png
+
+AppBundle\Entity\Evenement:
+    properties:
+        dateEvenement:
+            - GreaterThan: today
+
+AppBundle\Entity\Cours:
+    properties:
+        dateDebut:
+            - GreaterThan: now

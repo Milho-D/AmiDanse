@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 id="main-title">Contactez nous !</h1>
+    <div class="row" style="background-color: #EEEEEE">
+        <div class="col-md-6 offset-md-3">
+        <h2 class="text-center" style="margin-bottom: 30px">Vous avez une question ? Vous souhaitez participer à nos cours ou même adhérer à notre
+        association ?</h2>
+        </div>
+    </div>
+    <div class="row" style="background-color: #EEEEEE">
+        <div class="col-md-4 offset-md-2" style="margin-top: 30px">
+            <div id="contactModel">
+                {{ form_start(contactForm) }}
+                {{ form_widget(contactForm) }}
+                {{ form_end(contactForm) }}
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 20px">
+            <h2 class="text-center">Passez nous voir !</h2>
+            <p class="text-center" style="font-weight: bold">AMIDANSE</p>
+            <p class="text-center">73 avenue du maréchal Juin</p>
+            <p class="text-center">17000 La Rochelle</p>
+            <h2 class="text-center">Nous joindre par téléphone :</h2>
+            <p class="text-center">05 46 41 17 06</p>
+            <p class="text-center">Notre accueil téléphonique est ouvert du lundi au samedi de 10h à 12h et de 14h à 18h.</p>
+            <div id="map"></div>
+        </div>
+    </div>
+
+{% endblock body %}
+
+{% block javascripts %}
+    <script>
+        var uluru = {lat: 46.156781, lng: -1.180366};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    </script>
+{% endblock %}

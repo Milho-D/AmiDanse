@@ -1,0 +1,21 @@
+app_admin_avis_new:
+    path:  /new/{id}
+    defaults: { _controller: "AppBundle:Admin/Avis:new"}
+
+app_admin_avis_edit:
+    path:  /edit/{id}
+    defaults: { _controller: "AppBundle:Admin/Avis:edit"}
+
+app_admin_avis_showDetail:
+    path: /show/{id}
+    defaults: { _controller: "AppBundle:Admin/Avis:showdetail"}
+
+app_admin_avis_show:
+    path: /
+    defaults: { _controller: "AppBundle:Admin/Avis:show"}
+
+app_admin_avis_showByCours:
+    path: /show/bycours/{id}
+    defaults: { _controller: "AppBundle:Admin/Avis:showByCours"}
+
+

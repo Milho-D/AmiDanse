@@ -1,0 +1,111 @@
+AppBundle\Entity\Type:
+    HipHop:
+        nomType: 'Hip Hop'
+        courants:
+            - '@Danses_Urbaines'
+        referent: '@professeur2'
+        video: 'https://www.youtube.com/watch?v=d3y17D_K9Zw'
+    RnB:
+        nomType: 'RnB'
+        courants:
+            - '@Danses_Urbaines'
+        referent: '@professeur2'
+        video: 'https://youtu.be/ayQeblk8kkw?t=1m10s'
+    Ragga:
+        nomType: 'Ragga'
+        courants:
+           - '@Danses_Urbaines'
+        referent: '@professeur3'
+        video: 'https://youtu.be/OqjdWLEAJq0?t=30s'
+    ModernJazz:
+        nomType: 'Modern Jazz'
+        courants:
+            - '@Danses_Urbaines'
+        referent: '@professeur4'
+        video: 'https://youtu.be/vFApUattjIk?t=10s'
+    HeadBang:
+        nomType: 'Head Bang'
+        courants:
+            - '@Danses_Urbaines'
+        referent: '@professeur6'
+        video: 'https://youtu.be/EiAGSDkkRHw'
+    Samba:
+        nomType: 'Samba'
+        courants:
+            - '@Danses_Latines'
+        referent: '@professeur5'
+        video: 'https://youtu.be/A-iuQSnNtac?t=6s'
+    ChaChaCha:
+        nomType: 'Cha-Cha-Cha'
+        courants:
+            - '@Danses_Latines'
+        referent: '@professeur7'
+        video: 'https://youtu.be/_Pm4h1miOoc?t=48s'
+    jive:
+        nomType: 'jive'
+        courants:
+            - '@Danses_Latines'
+        referent: '@professeur7'
+        video: 'https://youtu.be/Tubyy8L8QJ0?t=52s'
+    Salsa:
+        nomType: 'Salsa'
+        courants:
+             - '@Danses_Latines'
+        referent: '@professeur7'
+        video: 'https://youtu.be/i4KmEF278zY?t=19s'
+    Rumba:
+        nomType: 'Rumba'
+        courants:
+            - '@Danses_Latines'
+            - '@Danses_Modernes'
+        referent: '@professeur2'
+        video: 'https://youtu.be/O-6x6LoU_60'
+    PasoDoble:
+        nomType: 'Paso Doble'
+        courants:
+            - '@Danses_Latines'
+            - '@Danses_Modernes'
+        referent: '@professeur2'
+        video: 'https://youtu.be/oscbWq9f_Ps'
+    OneStep:
+        nomType: 'One Step'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur'
+        video: 'https://youtu.be/sRlvGBH2Q0k?t=25s'
+    Foxtrot:
+        nomType: 'Foxtrot'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur4'
+        video: 'https://youtu.be/LQCDkaDaMjI?t=14s'
+    QuickStep:
+        nomType: 'Quick Step'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@responsable2'
+        video: 'https://youtu.be/sybAIxnJbNM?t=12s'
+    Tango:
+        nomType: 'Tango'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur3'
+        video: 'https://youtu.be/PNP5tDdMEIk?t=16s'
+    Boston:
+        nomType: 'Boston'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur6'
+        video: 'https://youtu.be/aLTyJGK-Hx8'
+    Charleston:
+        nomType: 'Charleston'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur8'
+        video: 'https://youtu.be/jUqRAUxip4U?t=27s'
+    Madison:
+        nomType: 'Madison'
+        courants:
+            - '@Danses_Modernes'
+        referent: '@professeur7'
+        video: 'https://youtu.be/uFsnEV-ghUU?t=1m22s'

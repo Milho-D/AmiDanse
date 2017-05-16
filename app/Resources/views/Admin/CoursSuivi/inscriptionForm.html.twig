@@ -1,0 +1,18 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <h1 id="main-title">Inscription à un cours</h1>
+    <div style="padding: 20px">
+
+    <p>{{ app.user.nom }} {{ app.user.prenom }}</p>
+
+    {#<h2>{{ type.nomType }}</h2>#}
+    <h3>Choisissez votre cours</h3>
+
+    {{ form_start(inscriptionForm) }}
+    {{ form_widget(inscriptionForm) }}
+    {{ form_end(inscriptionForm) }}
+
+    <a href="{{ path('app_admin_cours_choixtype') }}">retour</a>
+    </div>
+{% endblock %}

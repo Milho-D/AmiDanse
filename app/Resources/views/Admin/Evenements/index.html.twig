@@ -1,0 +1,36 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Evenements</h1>
+        <button type="button" class="btn" style="margin-left: 20px">
+            <a href="{{ path('app_admin_evenements_new') }}">Ajouter Evenement</a>
+        </button>
+    <div class="table-responsive" style="padding:20px">
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Lieu</th>
+                <th>Date</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for evenement in evenements %}
+                <tr>
+                    <td>{{ evenement.nomEvenement }}</td>
+                    <td>{{ evenement.lieuEvenement }}</td>
+                    <td>{{ evenement.dateEvenement|date('m/d/Y H:i') }}</td>
+                    <td><a href="{{ path('app_evenement_show', { 'id': evenement.id}) }}">Detail</a></td>
+                    <td><a href="{{ path('app_admin_evenements_edit', { 'id': evenement.id}) }}">Modifier</a></td>
+                    <td><a href="{{ path('app_admin_evenements_delete', { 'id': evenement.id}) }}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+{% endblock %}

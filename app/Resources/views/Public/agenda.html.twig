@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 id="main-title">Agenda</h1>
+    <div id="calendar" style="padding: 20px; margin: auto; background-color: #EEEEEE"></div>
+
+{% endblock body %}
+
+{% block javascripts %}
+    <script>
+        {% autoescape false %}
+        var evenements = {{ evenements }};
+        var cours = {{cours}};
+        {% endautoescape %}
+
+        $(document).ready(function() {
+
+            $('#calendar').fullCalendar(
+                {
+                    locale: 'fr',
+                    header: {
+                        center: 'month,agendaOneDay,listDay' // buttons for switching between views
+                    },
+                    minTime: '9:30:00',
+                    views: {
+                        agendaOneDay: {
+                            type: 'agenda',
+                            duration: { days: 7 },
+                            buttonText: 'Semaine',
+                            nowIndicator: true
+                        },
+                        listDay:{
+                            buttonText: 'Liste Jour'
+                        }
+                    },
+                    timeFormat: 'H:mm',
+                    eventSources: [
+                        {
+                            events : cours
+                        },
+                        {
+                            events: evenements
+                        }
+                    ]
+                }
+            )
+
+        });
+
+    </script>
+{% endblock %}

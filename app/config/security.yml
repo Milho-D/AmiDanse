@@ -1,0 +1,45 @@
+security:
+    encoders:
+        UserBundle\Entity\User: bcrypt
+
+    providers:
+        database_users:
+            entity: { class: UserBundle\Entity\User, property: email }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern:   ^/
+            anonymous: ~
+            provider:  database_users
+
+            form_login:
+                login_path: login
+                check_path: login_check
+                default_target_path: app_admin_profil
+
+            logout:
+                path: logout
+                target: /
+
+    access_control:
+
+        - { path: ^/admin/cours_suivis, roles: ROLE_DANSEUR }
+        - { path: ^/admin/cours_animes, roles: ROLE_DANSEUR }
+        - { path: ^/admin/cours/inscription, roles: ROLE_DANSEUR }
+        - { path: ^/admin/cours/[0-9]+/edit, roles: [ROLE_RESPONSABLE,ROLE_PROFESSEUR] }
+        - { path: ^/admin/cours/new, roles: [ROLE_RESPONSABLE,ROLE_PROFESSEUR] }
+        - { path: ^/admin/cours, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/danses, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/courants, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/evenements, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/types, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/salles, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/niveaux, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/users, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin/avis/new, roles: ROLE_DANSEUR }
+        - { path: ^/admin/avis, roles: ROLE_RESPONSABLE }
+        - { path: ^/admin, roles: ROLE_DANSEUR }

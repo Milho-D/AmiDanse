@@ -1,0 +1,15 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+
+    <h1 id="main-title">Inscription à un cours</h1>
+    <div style="padding: 20px">
+        <p>{{ app.user.nom }} {{ app.user.prenom }}</p>
+
+        <h3>Choisissez votre type de danse</h3>
+
+        {{ form_start(typeForm) }}
+        {{ form_widget(typeForm) }}
+        {{ form_end(typeForm) }}
+    </div>
+{% endblock %}

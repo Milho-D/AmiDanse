@@ -1,0 +1,251 @@
+AppBundle\Entity\Cours:
+    Cours1:
+        nomCours: 'premier cours'
+        dateDebut: <(new \DateTime('2017-05-16 18:30:00'))>
+        dateFin: <(new \DateTime('2017-05-16 19:30:00'))>
+        niveau: '@Debutant'
+        type: '@HipHop'
+        salle: '@Paris'
+        danseurs:
+            - '@danseur'
+            - '@responsable'
+        animateurs:
+            - '@professeur'
+    Cours2:
+        nomCours: 'deuxième cours'
+        dateDebut: <(new \DateTime('2017-04-16 18:30:00'))>
+        dateFin: <(new \DateTime('2017-04-16 19:30:00'))>
+        niveau: '@Intermediaire'
+        type: '@Ragga'
+        salle: '@NewYork'
+        danseurs:
+            - '@danseur'
+            - '@responsable'
+            - '@danseur2'
+            - '@danseur3'
+            - '@danseur4'
+            - '@danseur5'
+            - '@danseur6'
+            - '@danseur7'
+        animateurs:
+            - '@professeur'
+            - '@professeur3'
+        evenements:
+            - '@Evenement4'
+            - '@Evenement6'
+    Cours3:
+        nomCours: 'troisième cours'
+        dateDebut: <(new \DateTime('2017-05-12 10:30:00'))>
+        dateFin: <(new \DateTime('2017-05-12 12:00:00'))>
+        niveau: '@Debutant'
+        type: '@HeadBang'
+        salle: '@Madrid'
+        danseurs:
+            - '@danseur'
+            - '@responsable'
+            - '@danseur12'
+            - '@danseur11'
+            - '@danseur8'
+            - '@professeur2'
+            - '@danseur2'
+            - '@danseur9'
+        animateurs:
+            - '@professeur5'
+    Cours4:
+        nomCours: 'quatrième cours'
+        dateDebut: <(new \DateTime('2017-05-12 12:00:00'))>
+        dateFin: <(new \DateTime('2017-05-12 14:00:00'))>
+        niveau: '@Demonstration'
+        type: '@OneStep'
+        salle: '@Madrid'
+        danseurs:
+            - '@danseur'
+            - '@responsable'
+            - '@danseur'
+            - '@danseur3'
+            - '@danseur2'
+        animateurs:
+            - '@professeur5'
+        evenements:
+            - '@Evenement1'
+    Cours5:
+        nomCours: 'Cinquième cours'
+        dateDebut: <(new \DateTime('2017-05-13 10:00:00'))>
+        dateFin: <(new \DateTime('2017-05-13 11:30:00'))>
+        niveau: '@Avance'
+        type: '@Rumba'
+        salle: '@Paris'
+        danseurs:
+            - '@danseur10'
+            - '@danseur3'
+            - '@danseur6'
+        animateurs:
+            - '@professeur3'
+            - '@professeur6'
+        evenements:
+            - '@Evenement2'
+    Cours6:
+        nomCours: 'Sixième cours'
+        dateDebut: <(new \DateTime('2017-05-13 10:00:00'))>
+        dateFin: <(new \DateTime('2017-05-13 11:30:00'))>
+        niveau: '@Intermediaire'
+        type: '@Foxtrot'
+        salle: '@Madrid'
+        danseurs:
+            - '@danseur'
+            - '@danseur2'
+            - '@danseur8'
+        animateurs:
+            - '@professeur2'
+            - '@professeur8'
+    Cours7:
+        nomCours: 'Septième cours'
+        dateDebut: <(new \DateTime('2017-05-15 15:00:00'))>
+        dateFin: <(new \DateTime('2017-05-15 17:30:00'))>
+        niveau: '@Debutant'
+        type: '@Boston'
+        salle: '@NewYork'
+        danseurs:
+            - '@danseur'
+            - '@danseur2'
+            - '@danseur3'
+            - '@danseur4'
+            - '@danseur5'
+            - '@danseur6'
+        animateurs:
+            - '@professeur2'
+            - '@professeur8'
+            - '@professeur'
+            - '@professeur5'
+    Cours8:
+        nomCours: 'Huitième cours'
+        dateDebut: <(new \DateTime('2017-05-20 16:00:00'))>
+        dateFin: <(new \DateTime('2017-05-20 18:30:00'))>
+        niveau: '@Avance'
+        type: '@Salsa'
+        salle: '@Madrid'
+        animateurs:
+            - '@professeur'
+    Cours9:
+        nomCours: 'Neufième cours'
+        dateDebut: <(new \DateTime('2017-05-20 18:30:00'))>
+        dateFin: <(new \DateTime('2017-05-20 20:30:00'))>
+        niveau: '@Intermediaire'
+        type: '@Salsa'
+        salle: '@Madrid'
+        danseurs:
+            - '@danseur'
+            - '@danseur13'
+            - '@danseur12'
+            - '@danseur5'
+            - '@danseur4'
+            - '@danseur3'
+        animateurs:
+            - '@professeur'
+            - '@danseur5'
+    Cours10:
+        nomCours: 'Dixième cours'
+        dateDebut: <(new \DateTime('2017-05-21 10:00:00'))>
+        dateFin: <(new \DateTime('2017-05-21 12:00:00'))>
+        niveau: '@Avance'
+        type: '@RnB'
+        salle: '@Paris'
+        danseurs:
+            - '@danseur'
+            - '@danseur2'
+            - '@danseur7'
+            - '@danseur8'
+            - '@danseur9'
+        animateurs:
+            - '@professeur2'
+    Cours11:
+        nomCours: 'Onzième cours'
+        dateDebut: <(new \DateTime('2017-04-15 15:00:00'))>
+        dateFin: <(new \DateTime('2017-04-15 17:30:00'))>
+        niveau: '@Debutant'
+        type: '@Boston'
+        salle: '@NewYork'
+        danseurs:
+            - '@danseur'
+            - '@danseur2'
+            - '@danseur3'
+            - '@danseur4'
+            - '@danseur5'
+            - '@danseur6'
+        animateurs:
+            - '@professeur2'
+            - '@professeur8'
+            - '@professeur'
+            - '@professeur5'
+            - '@danseur7'
+        evenements:
+            - '@Evenement5'
+    Cours12:
+        nomCours: 'Douxième cours'
+        dateDebut: <(new \DateTime('2017-04-13 10:00:00'))>
+        dateFin: <(new \DateTime('2017-04-13 12:30:00'))>
+        niveau: '@Intermediaire'
+        type: '@ModernJazz'
+        salle: '@Paris'
+        danseurs:
+            - '@danseur13'
+            - '@danseur12'
+            - '@danseur11'
+            - '@danseur10'
+            - '@danseur2'
+        animateurs:
+            - '@professeur8'
+            - '@professeur7'
+            - '@professeur6'
+            - '@professeur5'
+        evenements:
+            - '@Evenement3'
+    Cours13:
+        nomCours: 'Treizième cours'
+        dateDebut: <(new \DateTime('2017-05-27 18:30:00'))>
+        dateFin: <(new \DateTime('2017-05-27 20:30:00'))>
+        niveau: '@Demonstration'
+        type: '@Salsa'
+        salle: '@NewYork'
+        danseurs:
+            - '@danseur'
+            - '@danseur13'
+            - '@danseur12'
+            - '@danseur2'
+            - '@danseur3'
+        animateurs:
+            - '@professeur'
+            - '@danseur5'
+        evenements:
+            - '@Evenement7'
+    Cours14:
+        nomCours: 'Quatorzième cours'
+        dateDebut: <(new \DateTime('2017-05-12 13:30:00'))>
+        dateFin: <(new \DateTime('2017-05-12 15:00:00'))>
+        niveau: '@Demonstration'
+        type: '@HipHop'
+        salle: '@Paris'
+        danseurs:
+            - '@danseur10'
+            - '@danseur7'
+            - '@danseur6'
+            - '@danseur4'
+        animateurs:
+            - '@professeur'
+        evenements:
+            - '@Evenement8'
+    Cours15:
+          nomCours: 'Quinzième cours'
+          dateDebut: <(new \DateTime('2017-05-14 10:00:00'))>
+          dateFin: <(new \DateTime('2017-05-14 12:00:00'))>
+          niveau: '@Avance'
+          type: '@ChaChaCha'
+          salle: '@Madrid'
+          danseurs:
+              - '@danseur10'
+              - '@danseur7'
+              - '@danseur6'
+              - '@danseur4'
+          animateurs:
+              - '@responsable'
+

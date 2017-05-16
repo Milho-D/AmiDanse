@@ -1,0 +1,36 @@
+app_admin_cours_index:
+    path: /
+    defaults: { _controller: "AppBundle:Admin/Cours:index"}
+
+app_admin_cours_inscription:
+    path: /inscription/{id}
+    defaults: { _controller: "AppBundle:Admin/InscriptionCours:listCours"}
+    methods: [GET, POST]
+
+app_admin_cours_choixtype:
+    path: /inscription
+    defaults: { _controller: "AppBundle:Admin/InscriptionCours:index"}
+    methods: [GET, POST]
+
+app_admin_cours_deinscription:
+    path: /deinscription/{id}
+    defaults: { _controller: "AppBundle:Admin/InscriptionCours:desinscription"}
+    methods: [GET, POST]
+
+app_admin_cours_new:
+    path:  /new
+    defaults: { _controller: "AppBundle:Admin/Cours:new"}
+
+app_admin_cours_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "AppBundle:Admin/Cours:edit"}
+
+app_admin_cours_validateinscription:
+    path: /validateinscription/{id}
+    defaults: { _controller: "AppBundle:Admin/InscriptionCours:inscription"}
+    methods: [GET, POST]
+
+app_admin_cours_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "AppBundle:Admin/Cours:delete"}
+

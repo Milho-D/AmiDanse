@@ -1,0 +1,30 @@
+AppBundle\Entity\Avis:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\AvisRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        noteAvis:
+            type: integer
+            column: note_avis
+        messageAvis:
+            type: text
+            column: message_avis
+    manyToOne:
+        cours:
+            targetEntity: AppBundle\Entity\Cours
+            joinColumn:
+            name: cours_id
+            referenceColumnName: id
+        danseur:
+            targetEntity: UserBundle\Entity\User
+            joinColumn:
+            name: danseur_id
+            referenceColumnName: id
+    lifecycleCallbacks: {  }
+

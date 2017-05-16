@@ -1,0 +1,257 @@
+UserBundle\Entity\User:
+        danseur:
+            nom: 'Babouin'
+            prenom: 'Jean-Michel'
+            sexe: 'Homme'
+            email: 'danseur@gmail.com'
+            password: <encodePassword(@danseur, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'jeanmi'
+            pictureName: 'jean.jpg'
+        danseur2:
+            nom: 'Doussin'
+            prenom: 'Francois'
+            sexe: 'Homme'
+            email: 'francois@gmail.com'
+            password: <encodePassword(@danseur2, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'fanfan'
+        danseur3:
+            nom: 'Develle'
+            prenom: 'Gaylord'
+            sexe: 'Homme'
+            email: 'gaylord@gmail.com'
+            password: <encodePassword(@danseur3, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'GayDev'
+        danseur4:
+            nom: 'De Oliveira'
+            prenom: 'Melanie'
+            sexe: 'Femme'
+            email: 'melanie@gmail.com'
+            password: <encodePassword(@danseur4, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'Milho'
+        danseur5:
+            nom: 'Ehmet'
+            prenom: 'Gulistan'
+            sexe: 'Femme'
+            email: 'gulistan@gmail.com'
+            password: <encodePassword(@danseur5, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'Gugu'
+        danseur6:
+            nom: 'Coudrais'
+            prenom: 'Richard'
+            sexe: 'Homme'
+            email: 'richard@gmail.com'
+            password: <encodePassword(@danseur6, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'Ricardo'
+        danseur7:
+            nom: 'NDiaye'
+            prenom: 'Toutou'
+            sexe: 'Femme'
+            email: 'toutou@gmail.com'
+            password: <encodePassword(@danseur7, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'Toutou'
+        danseur8:
+            nom: 'Hertz'
+            prenom: 'Nicolas'
+            sexe: 'Homme'
+            email: 'nicolas@gmail.com'
+            password: <encodePassword(@danseur8, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'Nico'
+        danseur9:
+            nom: 'Flammant'
+            prenom: 'Mathieu'
+            sexe: 'Homme'
+            email: 'mathflam@gmail.com'
+            password: <encodePassword(@danseur9, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'MathFlam'
+        danseur10:
+            nom: 'Angibaud'
+            prenom: 'Mathieu'
+            sexe: 'Homme'
+            email: 'angibaud@gmail.com'
+            password: <encodePassword(@danseur10, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'AngiMat'
+        danseur11:
+            nom: 'Orsinet'
+            prenom: 'Kevin'
+            sexe: 'Homme'
+            email: 'kevin.or@gmail.com'
+            password: <encodePassword(@danseur11, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'KevinLOL'
+        danseur12:
+            nom: 'Khrem'
+            prenom: 'Laure'
+            sexe: 'Femme'
+            email: 'laure@gmail.com'
+            password: <encodePassword(@danseur12, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'LaureALappel'
+        danseur13:
+            nom: 'Allard'
+            prenom: 'Laetitia'
+            sexe: 'Femme'
+            email: 'laetitia@gmail.com'
+            password: <encodePassword(@danseur13, "dansedanse")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: false
+            userName: 'LettyLoteste'
+        professeur:
+            nom: 'Ramirez'
+            prenom: 'Miguel'
+            sexe: 'Homme'
+            email: 'professeur@gmail.com'
+            password: <encodePassword(@professeur, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'miguouel'
+            pictureName: 'miguel.jpg'
+        professeur2:
+            nom: 'Lavie'
+            prenom: 'Geraldine'
+            sexe: 'Femme'
+            email: 'geraldine@gmail.com'
+            password: <encodePassword(@professeur2, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'Geraldine'
+        professeur3:
+            nom: 'Chan'
+            prenom: 'Marion'
+            sexe: 'Femme'
+            email: 'ch.marion@gmail.com'
+            password: <encodePassword(@professeur3, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'ChanM'
+        professeur4:
+            nom: 'Laurent'
+            prenom: 'Anais'
+            sexe: 'Femme'
+            email: 'anais.l@gmail.com'
+            password: <encodePassword(@professeur4, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'AnaisL'
+        professeur5:
+            nom: 'Depp'
+            prenom: 'Johnny'
+            sexe: 'Homme'
+            email: 'john@gmail.com'
+            password: <encodePassword(@professeur5, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'Johnny'
+        professeur6:
+            nom: 'Darty'
+            prenom: 'Rachida'
+            sexe: 'Femme'
+            email: 'rachida@gmail.com'
+            password: <encodePassword(@professeur6, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'Rachida'
+        professeur7:
+            nom: 'Smith'
+            prenom: 'Steven'
+            sexe: 'Homme'
+            email: 'rachida.com'
+            password: <encodePassword(@professeur7, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'Steven'
+        professeur8:
+            nom: 'Smith'
+            prenom: 'Josette'
+            sexe: 'Femme'
+            email: 'josette@gmail.com'
+            password: <encodePassword(@professeur8, "professeur")>
+            statut: true
+            etat: true
+            estProfesseur: true
+            estResponsable: false
+            userName: 'JosetteSmith'
+        responsable:
+            nom: 'Dupond'
+            prenom: 'Martine'
+            sexe: 'Femme'
+            email: 'responsable@gmail.com'
+            password: <encodePassword(@responsable, "responsable")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: true
+            userName: 'martine'
+            pictureName: 'martine.jpg'
+        responsable2:
+            nom: 'Dupond'
+            prenom: 'Gerard'
+            sexe: 'Homme'
+            email: 'gerard@gmail.com'
+            password: <encodePassword(@responsable2, "responsable")>
+            statut: true
+            etat: true
+            estProfesseur: false
+            estResponsable: true
+            userName: 'Gerard'

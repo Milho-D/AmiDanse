@@ -1,0 +1,16 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Modifier votre profil</h1>
+    <div style="padding: 20px">
+        <hr>
+        {{ form_start(userForm) }}
+        {{ form_widget(userForm) }}
+        {{ form_end(userForm) }}
+        <hr>
+
+        <a href="{{ path('app_admin_profil') }}">Retour</a>
+    </div>
+    </div>
+{% endblock %}

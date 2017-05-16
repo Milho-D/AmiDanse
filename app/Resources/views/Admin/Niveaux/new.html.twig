@@ -1,0 +1,15 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Niveau</h1>
+        <div style="padding: 20px">
+            <hr>
+            {{ form_start(niveauForm) }}
+            {{ form_widget(niveauForm) }}
+            {{ form_end(niveauForm) }}
+            <hr>
+            <a href="{{ path('app_admin_niveaux_index') }}">Retour</a>
+        </div>
+    </div>
+{% endblock %}

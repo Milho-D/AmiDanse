@@ -1,0 +1,15 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Salle</h1>
+        <div style="padding: 20px">
+            <hr>
+            {{ form_start(salleForm) }}
+            {{ form_widget(salleForm) }}
+            {{ form_end(salleForm) }}
+            <hr>
+            <a href="{{ path('app_admin_salles_index') }}">Retour</a>
+        </div>
+    </div>
+{% endblock %}

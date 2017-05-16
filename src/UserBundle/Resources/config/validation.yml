@@ -1,0 +1,17 @@
+UserBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: username
+            message: "le nom d'utilisateur est déja pris"
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: email
+            message: "un compte existe deja pour cette adresse"
+    properties:
+        plainPassword:
+            - Length:
+                min: 8
+                max: 20
+        picture:
+            - File:
+                mimeTypes: [image/jpeg, image/png]
+                mimeTypesMessage: merci d'uploader un jpg ou png

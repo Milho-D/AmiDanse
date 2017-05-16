@@ -1,0 +1,13 @@
+{% extends 'Admin/adminBase.html.twig' %}
+
+{% block content %}
+    <h1 id="main-title">Cours</h1>
+    <div style="padding: 20px">
+        <hr>
+        {{ form_start(coursForm) }}
+        {{ form_widget(coursForm) }}
+        {{ form_end(coursForm) }}
+        <hr>
+        <a href="{{ path('app_admin_cours_index') }}">Retour</a>
+    </div>
+{% endblock %}

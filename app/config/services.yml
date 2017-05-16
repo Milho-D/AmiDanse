@@ -1,0 +1,12 @@
+parameters:
+    email_sender: '%mailer_user%'
+    image_directory: '%kernel.root_dir%/../web/images'
+
+services:
+    app_mailer:
+        class: AppBundle\Service\Mailer
+        arguments: ['@mailer','%email_sender%', '@twig']
+
+    app_upload_image:
+        class: AppBundle\Service\Uploader
+        arguments: ['%image_directory%']

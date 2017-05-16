@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block h1 %}
+    <h1 id="main-title">Et vous, vous êtes plutôt quel style ?</h1>
+{% endblock %}
+
+{% block body %}
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                {% for courant in courants %}
+                <div class="col-md-4 col-sm-4 portfolio-item">
+                    <a href="#portfolioModal" class="portfolio-link courant" id="{{ courant.id }}" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <div id="imageHolder" style="">
+                        <img src="{% if courant.imageName %}
+                            {{ asset('images/' ~ courant.imageName) }}
+                        {% else %}
+                            {{ asset('images/danse-default.jpg') }}
+                         {% endif %}" class="img-responsive" alt="">
+                        </div>
+                    <div class="portfolio-caption">
+                        <h4>{{ courant.nomCourant }}</h4>
+                        <p class="text-muted">Je découvre !</p>
+                    </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="contentModal"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock %}

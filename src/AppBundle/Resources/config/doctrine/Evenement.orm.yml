@@ -1,0 +1,32 @@
+AppBundle\Entity\Evenement:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\EvenementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomEvenement:
+            type: string
+            length: 255
+            column: nom_evenement
+        lieuEvenement:
+            type: string
+            length: 255
+            column: lieu_evenement
+        dateEvenement:
+            type: datetime
+            column: date_evenement
+        imageLien:
+            type: string
+            length: 255
+            column: photo_evenement
+            nullable: true
+    manyToMany:
+        cours:
+            targetEntity: AppBundle\Entity\Cours
+            mappedBy: evenements
+    lifecycleCallbacks: {  }

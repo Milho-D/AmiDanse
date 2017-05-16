@@ -1,0 +1,38 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+    <h1 id="main-title">Salles</h1>
+    <button type="button" class="btn" style="margin-left: 20px">
+        <a href="{{ path('app_admin_salles_new') }}">Ajouter Salle</a>
+    </button>
+    <div class="table-responsive" style="padding:20px">
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Numero</th>
+                <th>Capacité</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for salle in salles %}
+                <tr>
+                    <td>{{ salle.nomSalle }}</td>
+                    <td>{{ salle.numeroSalle }}</td>
+                    <td>{{ salle.capaciteSalle }}</td>
+                    <td>
+                        <a href="{{ path('app_admin_salles_edit', { 'id': salle.id}) }}">Modifier</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('app_admin_salles_delete', { 'id': salle.id}) }}">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

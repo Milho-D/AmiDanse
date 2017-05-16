@@ -1,0 +1,65 @@
+UserBundle\Entity\User:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            lenght: 255
+            column: nom
+        prenom:
+            type: string
+            lenght: 255
+            column: prenom
+        email:
+            type: string
+            lenght: 255
+            column: email
+            unique: true
+        username:
+            type: string
+            lenght: 255
+            column: username
+            unique: true
+        password:
+            type: string
+            lenght: 255
+            column: password
+        sexe:
+            type: string
+            lenght: 255
+            column: sexe
+        roles:
+            type: array
+            column: roles
+        etat:
+            type: boolean
+            column: etat
+        statut:
+            type: string
+            lenght: 255
+            column: statut
+            nullable: true
+        estProfesseur:
+            type: boolean
+            column: estProfesseur
+        estResponsable:
+            type: boolean
+            column: estResponsable
+        pictureName:
+            type: string
+            lenght: 255
+            column: picture
+            nullable: true
+    manyToMany:
+        coursAnimes:
+            targetEntity: AppBundle\Entity\Cours
+            mappedBy: animateurs
+        coursDanses:
+            targetEntity: AppBundle\Entity\Cours
+            mappedBy: danseurs

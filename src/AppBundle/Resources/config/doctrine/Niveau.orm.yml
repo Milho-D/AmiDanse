@@ -1,0 +1,16 @@
+AppBundle\Entity\Niveau:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\NiveauRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomNiveau:
+            type: string
+            length: 255
+            column: nom_niveau
+    lifecycleCallbacks: {  }

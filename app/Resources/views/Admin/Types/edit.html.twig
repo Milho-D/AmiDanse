@@ -1,0 +1,15 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Types</h1>
+        <div style="padding: 20px">
+            <hr>
+            {{ form_start(typeForm) }}
+            {{ form_widget(typeForm) }}
+            {{ form_end(typeForm) }}
+            <hr>
+            <a href="{{ path('app_admin_danses_index') }}">Retour</a>
+        </div>
+    </div>
+{% endblock %}

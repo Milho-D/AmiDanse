@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block message %}
+    {{ message.messageKey|trans(message.messageData, 'security') }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div id="admin-content">
+            <form action="{{ path('login_check') }}" method="post" id="formModel">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Login :</label>
+                    <input type="email" class="form-control" id="username" name="_username" placeholder="Mon email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mot de passe :</label>
+                    <input type="password" class="form-control" id="password" name="_password"
+                           placeholder="Mon mot de passe"/>
+                </div>
+                <br/>
+                <input type="submit" class="btn" style="float: right" value="Connexion"/>
+                <a class="btn btn-info"  href="{{ path('register') }}">Créer un compte</a>
+            </form>
+        </div>
+    </div>
+{% endblock body %}

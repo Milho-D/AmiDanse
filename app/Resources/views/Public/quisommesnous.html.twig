@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'Layout/carousel.html.twig' %}
+    <h1 id="main-title">Qui Sommes Nous ?</h1>
+    <div class="row" id="welcome-content">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <p>Pellentesque fringilla sapien id justo pellentesque aliquam. Sed sodales mauris non quam dignissim
+                fringilla. In id luctus justo. In hac habitasse platea dictumst. Aliquam bibendum at lacus a dictum.
+                Pellentesque massa velit, aliquam id quam sed, fringilla tincidunt nisl. Nunc in quam faucibus nisi
+                lacinia suscipit. <span style="text-transform: uppercase">Integer nec odio iaculis</span>, auctor dolor ut, interdum nunc.
+            </p>
+            <br/>
+            <p>Nam vestibulum nibh vel...
+                tortor tristique vestibulum nec ut nisi. Maecenas egestas varius iaculis. Suspendisse tortor sapien,
+                lacinia at erat non, sollicitudin <span style="font-weight: bold">lacinia purus</span>.
+                Praesent suscipit facilisis leo vel ultrices. Vivamus
+                vestibulum dignissim vehicula. Integer fermentum tempus turpis ut sollicitudin.
+            </p>
+            <br/>
+            <p>Curabitur ultricies quam mauris, sit amet aliquam purus tincidunt vel. <em>Curabitur</em> finibus orci suscipit,
+                pretium urna non, tristique quam. Donec quis erat tempor urna mattis gravida sed at orci. Sed ut maximus
+                dolor. Phasellus in dolor euismod odio sagittis malesuada. Donec gravida faucibus sagittis. Donec
+                blandit lacus vel tellus vestibulum sodales.
+            </p>
+            <br/>
+            <p>Etiam erat neque, vestibulum ac sapien et, lacinia interdum diam. Nullam non ante quis lacus cursus
+                scelerisque id tempus nulla. Curabitur pretium lacus sed quam interdum laoreet. Morbi sit amet est ac
+                nibh dapibus convallis in a ante. <span style="color: red">Aliquam !</span> fermentum turpis vitae imperdiet laoreet.
+                Nam ornare facilisis tortor, in aliquet metus vestibulum tempor. Mauris ut enim ante.
+                Etiam molestie a felis non porta. Integer eleifend felis tincidunt condimentum faucibus.
+            </p>
+            <br>
+            <button type="button" class="btn" id="inscription">
+                <a href="{{ path('register') }}">Je m'inscris !</a>
+            </button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock body %}

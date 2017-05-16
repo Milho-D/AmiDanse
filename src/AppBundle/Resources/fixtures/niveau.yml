@@ -1,0 +1,9 @@
+AppBundle\Entity\Niveau:
+    Debutant:
+        nomNiveau: 'Débutant'
+    Intermediaire:
+        nomNiveau: 'Intermédiaire'
+    Avance:
+        nomNiveau: 'Avancé'
+    Demonstration:
+        nomNiveau: 'Démonstration'

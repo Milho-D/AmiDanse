@@ -1,0 +1,13 @@
+AppBundle\Entity\Salle:
+    Paris:
+        nomSalle: 'Paris'
+        numeroSalle: 1
+        capaciteSalle: 12
+    Madrid:
+        nomSalle: 'Madrid'
+        numeroSalle: 2
+        capaciteSalle: 8
+    NewYork:
+        nomSalle: 'New York'
+        numeroSalle: 3
+        capaciteSalle: 23

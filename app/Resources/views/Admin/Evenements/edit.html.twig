@@ -1,0 +1,15 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Evenement</h1>
+        <div style="padding: 20px">
+            <hr>
+            {{ form_start(evenementForm) }}
+            {{ form_widget(evenementForm) }}
+            {{ form_end(evenementForm) }}
+            <hr>
+            <a href="{{ path('app_admin_evenements_index') }}">Retour</a>
+        </div>
+    </div>
+{% endblock %}

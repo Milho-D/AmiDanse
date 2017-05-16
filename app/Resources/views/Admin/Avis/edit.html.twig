@@ -1,0 +1,10 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <h1 id="main-title"> Modifier un avis</h1>
+    <div style="padding: 20px">
+    {{ form_start(avisForm) }}
+    {{ form_widget(avisForm) }}
+    {{ form_end(avisForm) }}
+    </div>
+{% endblock %}

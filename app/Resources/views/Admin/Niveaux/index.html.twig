@@ -1,0 +1,33 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Niveaux</h1>
+        <div style="padding: 20px">
+            <button type="button" class="btn" style="margin-left: 20px">
+                <a href="{{ path('app_admin_niveaux_new') }}">Ajouter Niveau</a>
+            </button>
+            <div class="table-responsive" style="padding:20px">
+                <hr>
+                <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for niveau in niveaux %}
+                <tr>
+                    <td>{{ niveau.nomNiveau }}</td>
+                    <td><a href="{{ path('app_admin_niveaux_edit', { 'id': niveau.id}) }}">Modifier</a></td>
+                    <td><a href="{{ path('app_admin_niveaux_delete', { 'id': niveau.id}) }}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+    </div>
+{% endblock %}

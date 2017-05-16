@@ -1,0 +1,51 @@
+AppBundle\Entity\Avis:
+    Avis3:
+        noteAvis: 1
+        messageAvis: 'Jai pas du tout aimé'
+        cours: '@Cours2'
+        danseur: '@danseur3'
+    Avis4:
+        noteAvis: 3
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours2'
+        danseur: '@danseur3'
+    Avis5:
+        noteAvis: 3
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours11'
+        danseur: '@danseur3'
+    Avis6:
+        noteAvis: 5
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours11'
+        danseur: '@danseur5'
+    Avis7:
+        noteAvis: 4
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours11'
+        danseur: '@danseur2'
+    Avis8:
+        noteAvis: 1
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours11'
+        danseur: '@danseur'
+    Avis9:
+        noteAvis: 5
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours12'
+        danseur: '@danseur10'
+    Avis10:
+        noteAvis: 4
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours12'
+        danseur: '@danseur13'
+    Avis11:
+        noteAvis: 3
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours12'
+        danseur: '@danseur12'
+    Avis12:
+        noteAvis: 3
+        messageAvis: 'Vestibulum cursus suscipit mi, ut tempus nisi tincidunt'
+        cours: '@Cours12'
+        danseur: '@danseur2'

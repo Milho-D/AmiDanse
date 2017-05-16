@@ -1,0 +1,49 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <h1 id="main-title">Utilisateurs</h1>
+    <button type="button" class="btn" style="margin-left: 20px">
+        <a href="{{ path('app_admin_users_new') }}">Ajouter utilisateur</a>
+    </button>
+    <div class="table-responsive" style="padding:20px">
+        <hr>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Sexe</th>
+                <th>Etat</th>
+                <th>Professeur</th>
+                <th>Responsable</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.sexe }}</td>
+                <td>{{ (user.etat) ? 'disponible' : 'indisponible' }}</td>
+                <td>{{ (user.estProfesseur) ? 'oui' : 'non' }}</td>
+                <td>{{ (user.estResponsable) ? 'oui' : 'non' }}</td>
+                <td>
+                    <a href="{{ path('app_admin_users_edit', { 'id': user.id}) }}">Modifier Profil</a>
+                </td>
+                <td>
+                    <a href="{{ path('app_admin_users_edit_password', { 'id': user.id}) }}">Modifier mot de
+                        passe</a>
+                </td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

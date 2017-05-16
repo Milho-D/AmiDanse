@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center" id="main-title">Formulaire d'inscription</h1>
+    <div style="background-color: #EEEEEE">
+        <div id="formModel">
+            {{ form_start(registerForm) }}
+            {{ form_widget(registerForm) }}
+            {{ form_end(registerForm) }}
+            <br/>
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,73 @@
+AppBundle\Entity\Cours:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CoursRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomCours:
+            type: string
+            length: 255
+            column: nom_cours
+        dateDebut:
+            type: datetime
+            column: dateDebut
+        dateFin:
+            type: datetime
+            column: dateFin
+
+    manyToOne:
+        type:
+            targetEntity: AppBundle\Entity\Type
+            joinColumn:
+                name: type_id
+                referenceColumnName: id
+        salle:
+            targetEntity: AppBundle\Entity\Salle
+            joinColumn:
+                name: salle_id
+                referenceColumnName: id
+        niveau:
+            targetEntity: AppBundle\Entity\Niveau
+            joinColumn:
+                name: niveau_id
+                referenceColumnName: id
+    manyToMany:
+        evenements:
+            targetEntity: AppBundle\Entity\Evenement
+            inversedBy: cours
+            joinTable:
+                name: cours_evenements
+                joinColumns:
+                    evenement_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    cours_id:
+                        referencedColumnName: id
+        danseurs:
+            targetEntity: UserBundle\Entity\User
+            inversedBy: coursDanses
+            joinTable:
+                name: danseurs_cours
+                joinColumns:
+                    cours_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    user_id:
+                        referencedColumnName: id
+        animateurs:
+            targetEntity: UserBundle\Entity\User
+            inversedBy: coursAnimes
+            joinTable:
+                name: animateurs_cours
+                joinColumns:
+                    cours_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    user_id:
+                        referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,20 @@
+{% extends 'Admin/adminbase.html.twig' %}
+    {% block content %}
+        <div id="admin-content">
+        <h1 id="main-title">{{ app.user.prenom }} {{ app.user.nom }}</h1>
+
+        <img class="rounded float-left" src="{% if app.user.pictureName %}
+            {{ asset('images/' ~ app.user.pictureName) }}
+        {% else %}
+            {{ asset('images/profil_default.png') }}
+        {% endif %}">
+        <br/>
+        <h2>{{ app.user.sexe }}</h2>
+
+        <p style="font-weight: bold">{{ app.user.email }}</p>
+        <div class="row">
+            <a href="{{ path('app_admin_profil_edit') }}">Modifier votre profil</a>
+            <br/>
+            <a style="margin-left: 20px" href="{{ path('app_admin_password_edit') }}">Modifier votre mot de passe</a>
+        </div>
+    {% endblock %}

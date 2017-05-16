@@ -1,0 +1,40 @@
+AppBundle\Entity\Type:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\TypeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomType:
+            type: string
+            length: 255
+            column: nom_type
+        video:
+            type: string
+            lenght: 255
+            column: video
+            nullable: true
+    manyToMany:
+        courants:
+            targetEntity: AppBundle\Entity\Courant
+            inversedBy: types
+            joinTable:
+                name: courant_type
+                joinColumns:
+                    type_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    courant_id:
+                        referencedColumnName: id
+    manyToOne:
+        referent:
+            targetEntity: UserBundle\Entity\User
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+                nullable: false
+    lifecycleCallbacks: {  }

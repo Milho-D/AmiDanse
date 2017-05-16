@@ -1,0 +1,50 @@
+<button class="btn btn-primary hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 100%">
+    <span class="">Menu</span>
+</button>
+
+<div class="col-sm-3 col-md-2 bg-faded" id="main-content">
+
+    <nav class="sidebar collapse nav-bootstrap" id="collapseExample">
+
+        <ul class="nav flex-column" >
+            {% for role in app.user.roles %}
+            {% if role == 'ROLE_DANSEUR' %}
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ path('app_admin_profil')}}">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_cours_suivi') }}">Cours suivi</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{{ path('app_admin_cours_animes') }}">Cours animés</a>
+                </li>
+            {% endif %}
+            {% if role == 'ROLE_RESPONSABLE' %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_cours_index') }}">Cours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_evenements_index')}}">Evenements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_danses_index')}}">Danses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_salles_index')}}">Salles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_niveaux_index')}}">Niveaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_users_index')}}">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_admin_avis_show')}}">Avis</a>
+                </li>
+
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+    </nav>
+</div>

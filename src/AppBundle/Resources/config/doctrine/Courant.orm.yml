@@ -1,0 +1,26 @@
+AppBundle\Entity\Courant:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CourantRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomCourant:
+            type: string
+            length: 255
+            nullable: false
+            column: nom_courant
+        imageName:
+            type: string
+            lenght: 255
+            column: imageName
+            nullable: true
+    manyToMany:
+        types:
+            targetEntity: AppBundle\Entity\Type
+            mappedBy: courants
+    lifecycleCallbacks: {  }

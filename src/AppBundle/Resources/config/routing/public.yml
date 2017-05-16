@@ -1,0 +1,39 @@
+app_index:
+    path: /
+    defaults: { _controller: AppBundle:Public:index}
+
+app_danses_ajax:
+    path: /danses/ajax
+    defaults: { _controller: AppBundle:Public:ajaxDanses}
+
+app_danses:
+    path: /danses
+    defaults: { _controller: AppBundle:Public:detailDanses}
+
+app_qui_sommes_nous:
+    path: /quisommesnous
+    defaults: { _controller: AppBundle:Public:quiSommesNous}
+
+app_contact:
+    path: /contact
+    defaults: { _controller: AppBundle:Public:contact}
+
+app_agenda:
+    path: /agenda
+    defaults: { _controller: AppBundle:Public:agenda}
+
+app_mentions_legales:
+    path: /mentionslegales
+    defaults: { _controller: AppBundle:Public:mentionsLegales}
+
+app_plan_du_site:
+    path: /plandusite
+    defaults: { _controller: AppBundle:Public:planSite}
+
+app_evenement_show:
+    path: /evenements/{id}
+    defaults: { _controller: AppBundle:Admin/Evenement:show}
+
+app_cours_show:
+    path: /cours/{id}
+    defaults: { _controller: AppBundle:Admin/Cours:show}

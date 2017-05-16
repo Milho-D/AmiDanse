@@ -1,0 +1,11 @@
+app_admin_types_new:
+    path: /new
+    defaults: { _controller: "AppBundle:Admin/Type:new"}
+
+app_admin_types_edit:
+    path: /{id}/edit
+    defaults: { _controller: "AppBundle:Admin/Type:edit"}
+
+app_admin_types_delete:
+    path: /{id}/delete
+    defaults: { _controller: "AppBundle:Admin/Type:delete"}

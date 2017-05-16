@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'Admin/Layout/sidebar.html.twig' %}
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2" style="padding: 0">
+            {% block content %}{% endblock %}
+        </main>
+{% endblock %}

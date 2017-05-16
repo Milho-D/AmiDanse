@@ -1,0 +1,256 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+}
+
+body {
+    width: 100%;
+}
+
+.container-fluid {
+    min-height: calc(100vh - 100px)
+}
+
+h2.text-center,
+h2.text-justify,
+p.text-justify {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.text-center {
+}
+ /* custom content*/
+
+#main-content {
+    position: absolute;
+    z-index:1;
+}
+
+#formModel {
+    width: 300px;
+    padding-top: 30px;
+    margin-left: 40%;
+}
+
+#courseDescriptionModel {
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px 5px 20px;
+    border: 3px solid #FFCE5D;
+    border-radius: 8px;
+    position: relative;
+}
+
+#listAnimName {
+    list-style: none;
+}
+
+#events-img {
+    width: 180px;
+    height: 180px;
+    margin-left: 20%;
+}
+
+#custom {
+    padding-top: 30px;
+}
+
+#contactModel {
+    width: 100%;
+}
+
+#legalModel {
+    margin: 30px;
+    padding: 20px;
+}
+
+#welcome-content {
+    padding: 30px;
+}
+
+#welcome-content p {
+    font-size: 20px;
+}
+/* map */
+
+#map {
+    width:400px;
+    height:300px;
+    padding-top: 50px;
+    margin: auto;
+}
+
+/* logo*/
+
+#logo {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+/*danses.html.twig section*/
+
+.container-fluid {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+#main-title {
+    text-align: center;
+    padding: 30px 0 30px 0;
+    margin: 0;
+    color: #FFFEF1;
+    background-image: url("../images/banniere2.jpg");
+}
+
+#admin-title {
+    padding-top: 50px;
+}
+
+.img-responsive {
+    height: auto;
+    width: 100%;
+}
+
+#imageHolder {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    width: 100%;
+}
+
+/*form section*/
+
+form .form-actions {
+    border-top: 1px solid #d7d7d7;
+    padding-top: 20px;
+}
+
+form .form-actions a {
+    margin-left: 10px;
+}
+
+form ul.collection {
+    border: 1px dotted #d7d7d7;
+}
+
+form ul.collection li {
+    border-top: 1px dotted #d7d7d7;
+}
+
+/* calendar */
+
+#calendar {
+    margin-top: 20px;
+}
+
+
+/*footer*/
+
+footer{
+    padding:25px 0;
+    text-align:center;
+    width: 100%;
+    background-color: #004358;
+    min-height: 100px;
+    display: table-row;
+}
+
+footer ul.quicklinks {
+    margin-top: 0;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul.list-inline.social-buttons li {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 10px 10px 0 10px;
+    color: white;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.list-inline.social-buttons li a {
+    background-color: #336c7f
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    background-color: #ffce5d;
+}
+/* carousel*/
+
+.carousel-item {
+    max-width: 100%;
+    height: 600px;
+}
+
+#inscription {
+    height:40px;
+    width:125px;
+    margin: -20px -50px;
+    position:relative;
+    top:50%;
+    left:50%;
+    background-color: #ffce5d;
+}
+
+#inscription a {
+    color: #fffef1;
+}
+
+#inscription:hover {
+    background-color: #28808f;
+}
+
+/*button*/
+
+.btn,
+.btn-success {
+    background-color: #28808f;
+    color: #fffef1;
+}
+
+.btn a,
+.btn-success a,
+.btn a:hover,
+.btn-success a:hover {
+    color: #fffef1;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: #ffce5d;
+}
+
+.btn,
+.btn-success {
+    margin: 15px 0 15px 0;
+}
+
+.rounded.float-left {
+    height: 160px;
+    width: 200px;
+    padding: 15px;
+}
+
+@media (min-width: 544px) {
+    .nav-bootstrap.collapse {
+        display: block;
+    }
+}

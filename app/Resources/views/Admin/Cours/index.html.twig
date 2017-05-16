@@ -1,0 +1,50 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+    <div id="admin-content">
+        <h1 id="main-title">Cours</h1>
+        <button type="button" class="btn" style="margin-left: 20px">
+            <a href="{{ path('app_admin_cours_new') }}">Ajouter un cours</a>
+        </button>
+            <table class="table">
+            <thead>
+            <tr>
+                <th>Nom du cours</th>
+                <th>Type de danse</th>
+                <th>Salle</th>
+                <th>Niveau</th>
+                <th>Début du cours</th>
+                <th>Fin du cours</th>
+                <th>Place Restantes</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for cour in cours %}
+                <tr>
+                    <td>{{ cour.nomCours }}</td>
+                    <td>{{ cour.type.nomType }}</td>
+                    <td>{{ cour.salle.nomSalle }}</td>
+                    <td>{{ cour.niveau.nomNiveau }}</td>
+                    <td>{{ cour.dateDebut|date('d-m-Y H:i') }}</td>
+                    <td>{{ cour.dateFin|date('d-m-Y H:i') }}</td>
+                    <td style="width: 40px">{{ cour.placesRestantes }}</td>
+                    <td><a href="{{ path('app_cours_show', { 'id': cour.id}) }}">Détails</a></td>
+                    {% if app.user.estProfesseur == true or app.user.estResponsable == true %}
+                        <td><a href="{{ path('app_admin_cours_edit', { 'id': cour.id}) }}">Modifier</a></td>
+                    {% endif %}
+                    {% if app.user.estResponsable == true %}
+                        <td><a href="{{ path('app_admin_cours_delete', {'id': cour.id}) }}">Supprimer</a></td>
+                    {% endif %}
+                    {% if app.user.estProfesseur == true or app.user.estResponsable == true %}
+                        <td><a href="{{ path('app_admin_avis_showByCours', { 'id': cour.id}) }}">Voir les avis</a></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+{% endblock %}

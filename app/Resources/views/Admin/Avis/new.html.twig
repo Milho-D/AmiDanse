@@ -1,0 +1,13 @@
+{% extends 'Admin/adminbase.html.twig' %}
+
+{% block content %}
+<h1 id="main-title"> Ajouter un avis</h1>
+    <div style="padding: 20px">
+    <h4 style="font-weight: bold">Cours concerné : {{ cours.nomCours }}</h4>
+
+    
+    {{ form_start(avisForm) }}
+    {{ form_widget(avisForm) }}
+    {{ form_end(avisForm) }}
+    </div>
+{% endblock %}
